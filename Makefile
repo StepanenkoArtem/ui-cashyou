@@ -1,12 +1,15 @@
-build:
-	docker compose build
-
 ui:
-	docker compose up --build
+	docker compose up
 
 preview:
 	yarn run preview
 
 build:
-	yarn run preview
-		
+	docker compose build
+
+.PHONY:
+	up
+	down
+	build
+	bash
+	update
